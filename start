@@ -45,7 +45,7 @@ aws configure set aws_access_key_id ${AWSKEY}
 aws configure set aws_secret_access_key ${AWSSECRET} 
 aws configure set default.region us-west-2
 
-AWSLOGIN="$(aws ecr get-login | sed -e 's/-e none//g)"
+AWSLOGIN="$(aws ecr get-login | sed -e 's/-e none//g')"
 eval "${AWSLOGIN}"
 
 #if [ -f "/data/apps_nodered.tar" ] && [ -f "/data/apps_mqtt.tar" ] && [ -f "/data/apps_eventalerts.tar" ] && [ -f "/data/apps_datastream.tar" ]
